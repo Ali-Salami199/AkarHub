@@ -1,0 +1,10 @@
+# The deployable site is the Vite + React app in /frontend.
+# The Django API in /backend is not built or hosted by Netlify.
+[build]
+  base = "frontend"
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # Vite 8 requires Node 20.19+ / 22.12+
+  NODE_VERSION = "22"
